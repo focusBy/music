@@ -1,0 +1,180 @@
+
+/* 推荐 */
+.nav{
+  display: flex;
+  height: 90rpx;
+}
+.nav text{
+  flex: auto;
+  text-align: center;
+  line-height: 90rpx;
+  height: 90rpx;
+  font-size: 36rpx;
+   color: #767676;
+   box-sizing: border-box;
+   /* display: block; */
+}
+.nav text.cur{
+   color: #31c27c;
+   border-bottom: 2px solid #31c27c;
+}
+.container{
+  background: #f4f4f4;
+}
+.container .main{
+  padding: 50rpx 20rpx;
+  background: #fff;
+}
+.container .main .title{
+  font-size: 30rpx;
+  color: #333;
+  padding-bottom: 15rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.container .main .item{
+  display: flex;
+  width: calc(50% - 5rpx);
+  flex-direction: column;
+}
+.container .main .item:nth-child(2n){
+  margin-left: 10rpx;
+}
+.container .main .warp{
+  display: flex;
+  justify-content: space-between;
+}
+.container .main .item image{
+  width: 100%;
+  height: 350rpx;
+}
+.container .main .item text{
+  font-size: 26rpx;
+  padding: 15rpx 0rpx;
+}
+
+
+.container .main.f2 .warp{
+    flex-wrap: wrap;
+    
+}
+.container .main.f2 .item{
+   width: calc(50% - 6rpx);
+   margin-bottom: 10rpx;
+}
+.container .main.f2 .item .bo{
+  font-size: 24rpx;
+  margin-top: -4rpx;
+}
+
+/* 排行榜 */
+.toplist  .warp{
+  padding: 30rpx 20rpx;
+  background: #f4f4f4;
+}
+.toplist  .warp .item{
+  display: flex;
+  /* justify-content: space-between; */
+  background: #fff;
+  margin-bottom: 20rpx;
+  overflow: hidden;
+}
+.toplist  .warp .item image{
+  /* flex: inherit;  */
+  flex: 0 0 200rpx;
+  width: 200rpx;
+  height: 200rpx;
+}
+.toplist  .warp .item .left{
+  flex: auto;
+  padding-left:30rpx;
+  overflow: hidden;  
+}
+.toplist  .warp .item .left .title{
+  font-size: 30rpx;
+}
+.toplist .warp .item .left-warp{
+  width: 95%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.toplist  .warp .item .left text{
+  font-size: 26rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  
+}
+.toplist .fbiao{
+  color: #979797;
+  padding-right: 10rpx;
+}
+.toplist .arow{
+  align-self: center;
+}
+
+/* 搜索 */
+
+.sou .wrap{
+  background: #f4f4f4;
+  /* height: 100rpx; */
+  padding: 18rpx;
+  /* display: flex; */
+  position: relative;
+}
+.sou .wrap icon{
+  width: 38rpx;
+  height: 38rpx;
+  position: absolute;
+  left: 38rpx;
+  top:38rpx;
+  z-index: 10;
+}
+.sou .wrap .inp{
+  width: 612rpx;
+  height: 74rpx;
+   /* text-align: center;  */
+  background: #fff;
+  /* color: #f4f4f4; */
+  font-size: 32rpx;
+  padding-left: 100rpx;
+  border-radius: 6rpx; 
+}
+::-webkit-input-placeholder{
+  color: #f4f4f4;
+}
+
+.sou .content .hot{
+  margin: 0px 20px;
+}
+.sou .content .hot .title{
+  font-size: 30rpx;
+}
+.sou .content .hot .hotkey{
+  display: inline-block;
+  border: 1px solid rgba(0,0,0,.6);
+  padding: 0rpx 25rpx;
+  font-size: 32rpx;
+  border-radius: 99rpx;
+  margin:0rpx 28rpx 20rpx 0rpx;
+}
+.sou .result .item{
+  display: block;
+  padding: 20rpx 20rpx;
+  border-top: 1rpx solid #ccc;
+  font-size: 30rpx;
+}
+.sou .result .item{
+  display: flex;
+  justify-content: space-between;
+}
+.sou .result .item text:first-child{
+   display: block;
+   /* padding: 20rpx; */
+   flex: auto;
+}
+.sou .result1 text {
+   display: block;
+   padding: 20rpx 20rpx; 
+  border-top: 1rpx solid #ccc;
+  font-size: 30rpx;
+}

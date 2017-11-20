@@ -1,0 +1,95 @@
+<view class='nav'>
+ <text class='{{curNum==index ? "cur":""}}' wx:for="{{nav}}"
+  data-navindex='{{index}}' bindtap='tabnav'>{{item}}</text>
+</view>
+
+<!-- 推荐 -->
+<view class='tuijian' hidden="{{curNum !== 0}}">
+ <view class='banner'>
+   <swiper autoplay="true" indicator-dots="true" interval="3300" circular="true">
+    <swiper-item wx:for="{{indexdata.slider}}">
+      <image src='{{item.picUrl}}'> </image>
+     </swiper-item>
+   </swiper>
+</view>
+
+<view  class='container'>
+   <view class='f1 main'>
+      <view class='title'>电台</view>
+      <view class='warp'>
+       <view class='item' wx:for="{{indexdata.radioList}}">
+        <image src='{{item.picUrl}}'> </image>
+        <text class='text'>{{item.Ftitle}} </text>
+       </view>
+      </view>
+   </view>
+
+     <view class='f2 main'>
+      <view class='title'>热门歌单</view>
+      <view class='warp'>
+       <view class='item' wx:for="{{indexdata.songList}}">
+        <image src='{{item.picUrl}}'> </image>
+        <text class='text'>{{item.songListDesc}} </text>
+        <view class='bo'>{{item.songListAuthor}}</view>
+
+       </view>
+      </view>
+   </view>
+</view>
+ </view>
+
+
+<!-- 排行榜 -->
+<view class='toplist' hidden="{{curNum !== 1}}">
+    
+<view class='warp'>
+  <view class='item' wx:for="{{topList}}">
+     <image src='{{item.picUrl}}'></image>
+     <view class='left'>
+       <text class='title'>{{item.topTitle}}</text>
+       <view class='left-warp' wx:for="{{item.songList}}">
+         <text class='fbiao'>{{index+1}}</text>
+         <text>{{item.songname}}</text>
+         <text class='fbiao'>- {{item.singername}}</text>
+       </view>
+     </view>
+     <text class='arow fbiao'>></text>
+  </view>   
+
+</view>
+</view>
+
+<!-- 搜索 -->
+<view class='sou' hidden="{{curNum !== 2}}">
+    
+   <view class='wrap'>
+    <icon type="search"/>
+    <input bindinput="getsearchVal" bindfocus="getfoucus" 
+       bindconfirm="searchSubmit" class="input" placeholder="搜索歌单、歌曲、专辑" class='inp' />
+   </view> 
+   
+   <!-- 热门搜索显示 -->
+  <view class='content'  hidden='{{serchVal || foucus}}'>
+     <view class='hot'>
+      <view class='resou'>热门搜索</view>
+      <view class='hotkey' wx:for="{{searchHotKey}}">{{item.k}}</view>
+    </view>
+  </view>
+
+  <!--搜索结果    ? 只要返回了搜索结果我们显示 -->
+  <view class='result1' hidden='{{!searchList}}'>
+    <scroll-view>
+      <text wx:for="{{searchList}}" data-playid="{{index}}" bindtap='listen'>{{item.songname}}</text>
+    </scroll-view>
+  </view>
+
+  <!--搜索记录   当有搜索结果的时候我就消失  ? 没有获焦点  -->
+  <view class='result' hidden='{{searchList || !foucus}}'>
+      <text>搜索记录</text>
+      <view class='item' wx:for="{{searchstort}}">
+      <text data-value="{{item}}" bindtap='storeSearchreSult'>{{item}}</text>
+      <text bindtap='closestorage' data-closeid='{{index}}'>x</text>
+      </view>
+  </view>
+
+  </view>

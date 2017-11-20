@@ -1,0 +1,76 @@
+page{
+  background:#666;
+  /* opacity: 0.4; */
+   width: 100%;
+  height: 100%; 
+}
+.big{
+  width: 100%;
+  height: 100%;
+}
+.big .header{
+  padding: 20rpx;
+  display: flex;
+}
+.big .header .tou{
+  width: 150rpx;
+  height: 150rpx;
+}
+.big .header .song{
+  flex: auto;
+}
+.big .header .song text{
+  display: block;
+  font-size: 30rpx;
+  margin-left: 20rpx;
+  color: #fff;
+}
+.big .header .play{
+  width: 90rpx;
+  height: 90rpx;
+  float: right;
+}
+
+.lyic scroll-view{
+  height: 500rpx;
+}
+.lyic scroll-view .text{
+  padding: 20rpx 50rpx;
+  display: block;
+  font-size:36rpx;
+  color:#fff;
+}
+.jdt{
+  /* margin-top: -50rpx; */
+  display: flex;
+  padding: 20rpx;
+  align-items: center;
+}
+.jdt .text{
+  font-size: 28rpx;
+  color: #fff;
+}
+.jdt .text.begin{
+  margin-right: 10rpx;
+}
+.jdt .text.end{
+  margin-left: 10rpx;
+}
+.jdt .bar-yeye{
+  flex:auto;
+  height:50rpx;
+
+}
+.jdt .bar{
+  height: 5rpx;
+  flex: auto;
+  background: #f4f4f4;
+  margin-top:23rpx;
+}
+.jdt .bar .bar-child{
+  width: 5%;
+  height: 100%;
+  background: skyblue;
+}
+
+
